@@ -1,8 +1,8 @@
 [
     {
-        "id": "T0001",
-        "name": "HelloWorld Service",
-        "description": "Contains a project template with a basic HelloWorld service.",
+        "id": "hello_world_service",
+        "name": "Hello World Service",
+        "description": "This template demonstrates a simple Hello World Service.",
         "placeholders": [
             {
                 "id": "P001",
@@ -25,9 +25,59 @@
         ]
     },
     {
-        "id": "T0002",
-        "name": "Data Backend Service",
-        "description": "Contains a project template for creating a database-backed RESTful web service.",
+        "id": "content_based_routing",
+        "name": "Content Based Routing",
+        "description": "This template demonstrates an instance where a Content based router is used to route requests to different endpoints based on their content.",
+        "placeholders": [
+            {
+                "id": "P001",
+                "label": "Listener Port",
+                "name": "listenerPort",
+                "type": "text",
+                "value": [
+                    "9091"
+                ]
+            },
+            {
+                "id": "P002",
+                "label": "Client Endpoint",
+                "name": "clientEndpoint",
+                "type": "text",
+                "value": [
+                    "http://localhost:9090/companies"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "header_based_routing",
+        "name": "Header Based Routing",
+        "description": "This template demonstrates an instance where a Header based router is used to route requests to different endpoints based on the header of each request.",
+        "placeholders": [
+            {
+                "id": "P001",
+                "label": "Listener Port",
+                "name": "listenerPort",
+                "type": "text",
+                "value": [
+                    "9091"
+                ]
+            },
+            {
+                "id": "P002",
+                "label": "Client Endpoint",
+                "name": "clientEndpoint",
+                "type": "text",
+                "value": [
+                    "http://localhost:9090/companies"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "xml_to_json_transformation",
+        "name": "XML to JSON Transformation",
+        "description": "This template demonstrates message transformation capabilities between XML and JSON.",
         "placeholders": [
             {
                 "id": "P001",
@@ -46,49 +96,38 @@
                 "value": [
                     "localhost"
                 ]
-            },
+            }
+        ]
+    },
+    {
+        "id": "gsheets_salesforce_integration",
+        "name": "Google Spreadsheet and Salesforce API Integration",
+        "description": "This template demonstrates some of the capabilities of Google spreadsheet and Salesforce modules.",
+        "placeholders": [
             {
-                "id": "P003",
-                "label": "Database Port",
-                "name": "databasePort",
+                "id": "P001",
+                "label": "Listener Port",
+                "name": "listenerPort",
                 "type": "text",
                 "value": [
-                    "3306"
+                    "9091"
                 ]
             },
             {
-                "id": "P004",
-                "label": "Database Name",
-                "name": "databaseName",
+                "id": "P002",
+                "label": "Client Endpoint",
+                "name": "clientEndpoint",
                 "type": "text",
                 "value": [
-                    "sampledb"
-                ]
-            },
-            {
-                "id": "P005",
-                "label": "Database Username",
-                "name": "databaseUsername",
-                "type": "text",
-                "value": [
-                    "root"
-                ]
-            },
-            {
-                "id": "P006",
-                "label": "Database Password",
-                "name": "databasePassword",
-                "type": "password",
-                "value": [
-                    "root"
+                    "http://localhost:9090/companies"
                 ]
             }
         ]
     },
     {
-        "id": "T0003",
-        "name": "Content Based Routing",
-        "description": "Contains a project template for implementing Content-Based Routing.",
+        "id": "amazons3_service",
+        "name": "Amazon S3 Connector",
+        "description": "This template demonstrates on how to use Amazon S3 connector.",
         "placeholders": [
             {
                 "id": "P001",

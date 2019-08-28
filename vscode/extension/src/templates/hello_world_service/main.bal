@@ -16,15 +16,16 @@
 
 import ballerina/http;
 import ballerina/log;
+import ballerina/config;
 
 // By default, Ballerina exposes an HTTP service via HTTP/1.1.
-service hello on new http:Listener(${listenerPort}) {
+service hello on new http:Listener(config:getAsInt("LISTENER_PORT")) {
 
     // Resource functions are invoked with the HTTP caller and the
     // incoming request as arguments.
     resource function sayHello(http:Caller caller, http:Request req) {
         // Sends a response back to the caller.
-        var result = caller->respond("${message}");
+        var result = caller->respond(config:getAsString("RESPONSE"));
         // Logs the `error` in case of a failure.
         if (result is error) {
             log:printError("Error sending response", err = result);

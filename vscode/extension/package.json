@@ -32,8 +32,8 @@
 		"commands": [
 			{
 				"command": "ballerinaIntegrator.projectTemplates",
-				"title": "Generate Project from Ballerina Integrator Template",
-				"category": "Ballerina"
+				"title": "Generate Module from Template",
+				"category": "Ballerina Integrator"
 			}
 		],
 		"configuration": {

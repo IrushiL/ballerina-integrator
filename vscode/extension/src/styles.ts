@@ -16,77 +16,329 @@
 
 export let homeStyles: string = `
             <style>
-                * {
-                    box-sizing: border-box;
-                }
+            body{
+                font-family: 'Roboto', sans-serif;
+                color: #707070;
+                font-weight: 300;
+            }
+            
+            .heading-page{
+                font-size: 35px;
+                text-align: left;
+                margin-top: 10%;
+                letter-spacing: 0px;
+            }
+            
+            .heading-page-two{
+                font-size: 30px;
+                margin-top: 10%;
+                margin-bottom: 5%;
+                letter-spacing: 0px;
+            }
+            
+            a{
+                text-decoration: none;
+                color: #707070;
+            }
+            
+            a:hover{
+                color: #0078CF;
+            }
+            
+            .button-section{
+                margin-top: 3%;
+            }
+            
+            .create{
+                font-size: 20px;
+                text-align: left;
+            }
+            
+            .create > *{
+                vertical-align: middle;
+            }
+            
+            .create svg{
+                width: 57px;
+                margin-right: 15px;
+            }
+            
+            .create svg path{
+                fill: #0078CF;
+            }
+            
+            #searchTemplate{
+                line-height: 30px;
+                padding: 5px 13px;
+                font-size: 20px;
+                background: #F0F0F0;
+                border: 1px solid #BDC3C7;
+            
+            }
+            
+            .search{
+                position: relative;
+            }
+            
+            .search svg{
+                fill: #BDC3C7;
+                width: 30px;
+                position: absolute;
+                right: 7px;
+                top: 7px;
+            }
+            
+            .templates{
+                margin-top: 3%;
+            }
+            
+            .box{
+                width: 302px;
+                height: 214px;
+                background: #fff;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.16);
+                float: left;
+            }
 
-                body.vscode-light {
-                    color: black;
-                }
-                
-                body.vscode-dark {
-                    color: white;
-                }
-                
-                body.vscode-high-contrast {
-                    color: red;
-                }
 
-                body {
-                    font-family: Arial, Helvetica, sans-serif;
-                }
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
 
-                a {
-                    text-decoration: none;
-                    color: #c2c3cb;
-                }
 
-                a:hover { 
-                    color: #20B2AA; 
-                }
+body {
+  margin: 0;
+}
 
-                .card {
-                    box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2);
-                    transition: 0.3s;
-                    width: 100%;
-                    border-radius: 15px;
-                    padding: 20px;
-                    text-align: center;
-                }
-                
-                /* Float four columns side by side */
-                .column {
-                    float: left;
-                    width: 33.33%;
-                    padding: 16px;
-                    display: table-cell;
-                }
-                
-                /* Remove extra left and right margins, due to padding */
-                .row {
-                    margin: 0 -5px;
-                    display: table;
-                    width: 100%;
-                }
-                
-                /* Clear floats after the columns */
-                .row:after {
-                    content: "";
-                    display: table;
-                    clear: both; 
-                }
-                
-                /* Responsive columns */
-                @media screen and (max-width: 600px) {
-                    .column {
-                        width: 100%;
-                        display: table-cell;
-                    }
-                }
-                
-                .card:hover {
-                    box-shadow: 0 16px 16px 0 rgba(0,0,0,0.2);
-                }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+
+
+a {
+  background-color: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+
+button {
+  overflow: visible;
+}
+
+
+button,
+select {
+  text-transform: none;
+}
+
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+
+textarea {
+  overflow: auto;
+}
+
+
+
+optgroup {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
             </style>`;
 
 export let formStyles: string = `
